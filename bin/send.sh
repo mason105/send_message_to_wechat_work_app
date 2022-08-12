@@ -22,7 +22,7 @@ ACCESS_TOKEN=`echo $token_response | jq -r .access_token`
 
 #
 #curl -d "${MESSAGE_BODY}" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${ACCESS_TOKEN}"
-#curl -s -S -d "@.__wechat_message_body.json" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${ACCESS_TOKEN}"
+curl -s -S -d "@.__wechat_message_body.json" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${ACCESS_TOKEN}"
 
 
 rm -rf ./.__wechat_message_body.json
