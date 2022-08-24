@@ -1,39 +1,39 @@
 name: 'Work wechat agent message send'
-description: '企业微信应用消息发送插件'
+description: 'send message to wechat work'
 branding:
   icon: 'send'  
   color: 'green'
 inputs:
   wechat_id:
-    description: '企业微信ID'
+    description: 'wechat id'
     required: true
     default: ''
   agent_secret:
-    description: '企业微信自建应用密钥'
+    description: 'agent secret'
     required: true
     default: ''
   agent_id:
-    description: '企业微信自建应用ID(如:1000002)'
+    description: 'agent id'
     required: true
     default: ''
   to_user:
-    description: '消息接收人，多个使用竖线|分割,默认为空发送给应用下所有人'
+    description: 'user name list'
     required: false
     default: '@all'
   msgtype:
-    description: '消息类型，当前支持text,markdown两种类型'
+    description: 'msg type'
     required: false
     default: 'text'
   content:
-    description: '消息内容换行使用\n'
+    description: 'use \n for line break'
     required: true
     default: ''
   cache_path:
-    description: 'token缓存目录'
+    description: 'token path'
     required: false
     default: '~/.wechat_token/'
   send_step:
-    description: '消息发送时机 调用时(main)或完成时(post)'
+    description: 'main or post'
     required: false
     default: 'main'
 runs:
