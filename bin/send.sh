@@ -23,8 +23,8 @@ ACCESS_TOKEN=`echo $token_response | jq -r .access_token`
 #
 #curl -d "${MESSAGE_BODY}" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${ACCESS_TOKEN}"
 
-MOCK=`echo "$SEND_CONDITION" | tr '[:upper:]' '[:lower:]'`
-if [[ "$SEND_CONDITION" == "true" ]]; then
+MOCK=`echo "$MOCK" | tr '[:upper:]' '[:lower:]'`
+if [[ "$MOCK" == "true" ]]; then
     echo "message did not send to wechat work. due to user request"
 else
     curl -s -S -d "@.__wechat_message_body.json" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${ACCESS_TOKEN}"
