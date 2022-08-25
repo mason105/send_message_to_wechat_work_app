@@ -34,7 +34,7 @@ inputs:
     description: 'main or post'
     required: false
     default: 'main'
-  send_contidion:
+  mock:
     description: 'main or post'
     required: false
     default: 'true'
@@ -50,6 +50,6 @@ runs:
     - ${{ inputs.content }}
     - ${{ inputs.cache_path }}
     - ${{ inputs.send_step }}
-    - ${{ inputs.send_contidion }}
+    - ${{ inputs.mock }}
   entrypoint: '/opt/bin/main.sh'
   post-entrypoint: '/opt/bin/post.sh'

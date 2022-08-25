@@ -16,8 +16,8 @@ MSG_TYPE=$5
 CONTENT=$6
 CACHE_PATH=$7
 SEND_STEP=$8
-SEND_CONDITION=$9
-echo 'sendcondi:'$SEND_CONDITION
+MOCK=$9
+echo 'mock:'$MOCK
 if [ "x$SEND_STEP" != "xmain" ]; then
     echo "::notice send_step param value is not main , skip exec"
     exit 0;
