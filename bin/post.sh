@@ -15,6 +15,7 @@ MSG_TYPE=$5
 CONTENT=$6
 CACHE_PATH=$7
 SEND_STEP=$8
+SEND_CONDITION=$9
 
 if [ "x$SEND_STEP" != "xpost" ]; then
     echo "::notice send_step param value is not post , skip exec";

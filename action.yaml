@@ -1,8 +1,6 @@
+# action.yml
 name: 'Work wechat agent message send'
 description: 'send message to wechat work'
-branding:
-  icon: 'send'  
-  color: 'green'
 inputs:
   wechat_id:
     description: 'wechat id'
@@ -36,6 +34,10 @@ inputs:
     description: 'main or post'
     required: false
     default: 'main'
+  send_contidion:
+    description: 'main or post'
+    required: false
+    default: 'true'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -48,5 +50,6 @@ runs:
     - ${{ inputs.content }}
     - ${{ inputs.cache_path }}
     - ${{ inputs.send_step }}
+    - ${{ inputs.send_contidion }}
   entrypoint: '/opt/bin/main.sh'
   post-entrypoint: '/opt/bin/post.sh'
