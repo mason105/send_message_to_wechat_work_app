@@ -35,9 +35,9 @@ inputs:
     required: false
     default: 'main'
   mock:
-    description: 'main or post'
+    description: 'if set true, the message will not send'
     required: false
-    default: 'true'
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
