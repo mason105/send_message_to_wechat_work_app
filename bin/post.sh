@@ -16,7 +16,7 @@ CONTENT=$6
 CACHE_PATH=$7
 SEND_STEP=$8
 SEND_CONDITION=$9
-
+echo 'sendcondi:'$SEND_CONDITION
 if [ "x$SEND_STEP" != "xpost" ]; then
     echo "::notice send_step param value is not post , skip exec";
     exit 0;
